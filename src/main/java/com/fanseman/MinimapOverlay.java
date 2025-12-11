@@ -30,7 +30,6 @@ public class MinimapOverlay extends Overlay {
 		setPosition(OverlayPosition.DYNAMIC);
 		setLayer(OverlayLayer.ABOVE_WIDGETS);
 		setPriority(Overlay.PRIORITY_HIGH);
-		setMovable(true);
 	}
 
 	// Package-private constructor for testing
