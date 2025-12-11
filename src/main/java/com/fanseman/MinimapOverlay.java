@@ -47,7 +47,7 @@ public class MinimapOverlay extends Overlay {
 		if (!config.showZoneOnMinimap()) {
 			return null;
 		}
-		
+
 		// In production, check for player location. In test mode, skip this check.
 		if (!testMode && (client.getLocalPlayer() == null || client.getLocalPlayer().getWorldLocation() == null)) {
 			return null;

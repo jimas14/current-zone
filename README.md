@@ -22,9 +22,7 @@ Displays your current named location around the minimap and more prominently on 
 
 ## How It Works
 
-Current zone is determined by the player's current x/y coordinates against a long list of WorldArea bounding boxes that make up the named zones/areas in Gielinor.
-
-Huge shout out to [Explv's Map](https://explv.github.io/), which out-of-the-box offers a way to create a series of bounding boxes and get a list of WorldAreas.
+Zone is determined by the player's current x/y coordinates against a long list of WorldArea bounding boxes that make up the named zones/areas in Gielinor.
 
 ## Contributing
 
