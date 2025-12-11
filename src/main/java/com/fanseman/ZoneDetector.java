@@ -60,9 +60,9 @@ public class ZoneDetector {
      * All planes > 0 are considered to be 0.
      */
 	static {
-		// TODO: Finish charting all named zones in Gielinor
-		// TODO: Chart the seas (with new sailing update)
-        // TODO: Underground & instanced areas
+		// TODO: Finish charting surface zones & regions
+		// TODO: Chart seas & oceans
+        // TODO: Chart underground & instanced areas
 
 		// Regions
 		REGION_LIST.add(GIELINOR_SURFACE);

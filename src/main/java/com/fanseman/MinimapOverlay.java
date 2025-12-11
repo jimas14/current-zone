@@ -12,6 +12,7 @@ import java.awt.*;
 
 /**
  * Overlay to display the player's current zone beneath the minimap.
+ * TODO: Make alt+draggable
  */
 @Slf4j
 public class MinimapOverlay extends Overlay {
