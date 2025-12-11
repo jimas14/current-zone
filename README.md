@@ -43,6 +43,7 @@ Contributions are welcome to refine zone/area boundaries or add ones I haven't g
 - `WorldAreaOutput.java`: Helpful for copy from & pasting to [Explv's Map](https://explv.github.io/)
 
 ### Todo:
+ * Improve design
  * Finish charting all zones & areas (land, sea, underground/instanced)
  * Make minimap element alt+draggable
  * Make area/region display configurable (like `Lumbridge` instead of `Lumbridge, Kingdom of Misthalin`)
