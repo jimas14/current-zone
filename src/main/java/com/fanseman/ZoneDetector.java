@@ -60,23 +60,19 @@ public class ZoneDetector {
      * All planes > 0 are considered to be 0.
      */
 	static {
-		// TODO: Finish charting surface zones & regions
-		// TODO: Chart seas & oceans
-        // TODO: Chart underground & instanced areas
-
 		// Regions
 		REGION_LIST.add(GIELINOR_SURFACE);
 		REGION_LIST.add(UNDERGROUND_INSTANCED);
 
 		// Misthalin Area & Zones
-        MISTHALIN_AREA.add(new NamedWorldArea("Misthalin", 3072, 3329, 314, 191, 0));
-        MISTHALIN_AREA.add(new NamedWorldArea("Misthalin", 3072, 3203, 195, 126, 0));
-        MISTHALIN_AREA.add(new NamedWorldArea("Misthalin", 3386, 3464, 38, 56, 0));
-        MISTHALIN_AREA.add(new NamedWorldArea("Misthalin", 3111, 3174, 6, 29, 0));
-        MISTHALIN_AREA.add(new NamedWorldArea("Misthalin", 3094, 3145, 31, 32, 0));
-        MISTHALIN_AREA.add(new NamedWorldArea("Misthalin", 3060, 3052, 93, 85, 0));
-        MISTHALIN_AREA.add(new NamedWorldArea("Misthalin", 3079, 3006, 49, 46, 0));
-        MISTHALIN_AREA.add(new NamedWorldArea("Misthalin", 3133, 3137, 123, 66, 0));
+        MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3072, 3329, 314, 191, 0));
+        MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3072, 3203, 195, 126, 0));
+        MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3386, 3464, 38, 56, 0));
+        MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3111, 3174, 6, 29, 0));
+        MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3094, 3145, 31, 32, 0));
+        MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3060, 3052, 93, 85, 0));
+        MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3079, 3006, 49, 46, 0));
+        MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3133, 3137, 123, 66, 0));
         MISTHALIN_ZONE_LIST.add(new NamedWorldArea("Lumbridge", 3181, 3195, 75, 87, 0));
 		MISTHALIN_ZONE_LIST.add(new NamedWorldArea("Lumbridge Swamp", 3140, 3141, 109, 54, 0));
         MISTHALIN_ZONE_LIST.add(new NamedWorldArea("Toll Gate", 3259, 3215, 28, 25, 0));
@@ -169,7 +165,7 @@ public class ZoneDetector {
         KHARIDIAN_DESERT_ZONE_LIST.add(new NamedWorldArea("Menaphos", 3233, 2713, 38, 35, 0));
 
         // Asgarnia Area & Zones
-        ASGARNIA_AREA.add(new NamedWorldArea("Asgarnia", 2900, 3200, 200, 200, 0));
+        ASGARNIA_AREA.add(new NamedWorldArea("Kingdom of Asgarnia", 2900, 3200, 200, 200, 0));
         ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Port Sarim", 3005, 3470, 50, 50, 0));
         ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Mining Guild", 3000, 3330, 50, 50, 0));
         ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Falador", 2944, 3360, 100, 100, 0));
@@ -183,7 +179,7 @@ public class ZoneDetector {
         ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Asgarnian Ice Dungeon", 3000, 3150, 50, 50, 0));
 
         // Kandarin Area & Zones
-        KANDARIN_AREA.add(new NamedWorldArea("Kandarin", 2500, 3000, 400, 600, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdom of Kandarin", 2500, 3000, 400, 600, 0));
 		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Seers' Village", 2680, 3450, 50, 50, 0));
 		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Yanille", 2540, 3070, 50, 50, 0));
 		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Camelot", 2750, 3450, 50, 50, 0));

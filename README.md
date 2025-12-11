@@ -2,116 +2,96 @@
 ### A plugin for [RuneLite](https://runelite.net/)
 ##### [![Plugin Installs](http://img.shields.io/endpoint?url=https://api.runelite.net/pluginhub/shields/installs/plugin/current-zone)](https://runelite.net/plugin-hub/fanseman) [![Plugin Rank](http://img.shields.io/endpoint?url=https://api.runelite.net/pluginhub/shields/rank/plugin/current-zone)](https://runelite.net/plugin-hub)
 
-Displays your current zone and region statically and on change.
+Displays your current named location around the minimap and more prominently on zone change.
 
 ## Features
 
-### 📍 Minimap Zone Display
-The plugin shows your current zone name directly beneath the minimap, making it easy to see your location at a glance. The display updates automatically as you move through different areas of Gielinor.
+### Minimap Zone Display
 
-<screenshot>
+\<screenshot>
 
-### 🎬 Zone Change Animations
-When you enter a new zone, a beautiful animated notification appears in the center of your screen, clearly displaying the zone name. This helps you stay aware of location changes, especially during quests or exploration.
+### Zone Change Animations
 
-<screenshot>
+\<screenshot>
 
-### 🎨 Customizable Appearance
-Fully customize the look of the zone displays to match your preferences:
-- **Text Color**: Choose any color for the zone text
-- **Background Color**: Set the background color for better visibility
-- **Toggle Overlays**: Enable or disable the minimap overlay and center screen animations independently
+### Configuration
+- **Text Color & Background Color**: Both text & background colors can be customized.
+- **Toggle Overlays**: Both minimap & zone change displays can be toggled on/off.
 
-<screenshot>
-
-## Installation
-
-1. Open RuneLite
-2. Navigate to the Plugin Hub
-3. Search for "Current Zone"
-4. Click "Install"
-5. The plugin will be enabled automatically
-
-## Configuration
-
-Access the plugin settings through:
-- **RuneLite Settings** → **Plugins** → **Current Zone**
-
-### Available Options
-
-- **Show Minimap Overlay**: Toggle the zone display beneath the minimap (enabled by default)
-- **Show Center Overlay**: Toggle the animated zone notification when entering new areas (enabled by default)
-- **Zone Text Color**: Customize the color of the zone text
-- **Zone Background Color**: Customize the background color behind the text
-
-## Supported Zones
-
-The plugin recognizes zones across major regions of Gielinor:
-
-- **Misthalin**: Lumbridge, Varrock, Draynor Village, Grand Exchange, and more
-- **Kharidian Desert**: Al Kharid, Pollnivneach, Nardah, Menaphos, Sophanem, and desert locations
-- **Asgarnia**: Falador, Port Sarim, Taverley, Rimmington, and surrounding areas
-- **Kandarin**: Seers' Village, Yanille, Camelot, Ardougne, and more
-- **Wilderness**: All wilderness levels and key locations
-- **Morytania**: Canifis, Port Phasmatys, Burgh de Rott, and other Morytanian locations
-- **Tirannwn**: Prifddinas, Lletya, and elven lands
-- **Fremennik Province**: Rellekka, Jatizso, Neitiznot, and northern territories
-
-The plugin continues to expand coverage as more zones are added. If you find a zone that isn't recognized, feel free to report it!
+\<screenshot>
 
 ## How It Works
 
-The plugin tracks your character's position in the game world and matches it against a comprehensive database of zone boundaries. When you move into a new zone, it automatically updates the display. The zone detection works across all planes (floors), so you'll see accurate zone information whether you're on the surface, in a building, or underground.
+Current zone is determined by the player's current x/y coordinates against a long list of WorldArea bounding boxes that make up the named zones/areas in Gielinor.
 
-## Tips for Users
-
-- **Questing**: Keep the center overlay enabled to easily track when you enter new quest areas
-- **Exploration**: Use the minimap overlay to always know your current location while exploring
-- **Customization**: Adjust colors to match your RuneLite theme or improve visibility
-- **Performance**: The plugin is lightweight and won't impact your game performance
-
-## For Developers
-
-This plugin is open source and welcomes contributions! The zone detection system uses coordinate-based boundaries defined in `ZoneDetector.java`. If you'd like to add more zones or improve existing ones:
-
-1. Fork the repository
-2. Add zone definitions to the appropriate zone lists in `ZoneDetector.java`
-3. Test your changes
-4. Submit a pull request
-
-The plugin architecture is straightforward:
-- `CurrentZonePlugin.java`: Main plugin class handling zone updates
-- `ZoneDetector.java`: Zone detection logic and zone definitions
-- `MinimapOverlay.java`: Renders the zone display beneath the minimap
-- `CenterOverlay.java`: Handles the animated center screen notification
-- `PluginConfig.java`: Configuration options
-
-## Troubleshooting
-
-**Zone not displaying?**
-- Make sure the plugin is enabled in RuneLite settings
-- Check that "Show Minimap Overlay" is enabled in the plugin configuration
-- Verify you're in a recognized zone (some areas may show as "Unknown" if not yet mapped)
-
-**Center animation not showing?**
-- Ensure "Show Center Overlay" is enabled
-- The animation only appears when entering a *new* zone, not when staying in the same area
-
-**Colors not visible?**
-- Try adjusting the text and background colors in the plugin settings
-- Ensure the colors have enough contrast for your game client theme
+Huge shout out to [Explv's Map](https://explv.github.io/), which out-of-the-box offers a way to create a series of bounding boxes and get a list of WorldAreas.
 
 ## Contributing
 
-Found a missing zone? Have a feature suggestion? Contributions are welcome! Please feel free to:
-- Open an issue for bugs or feature requests
-- Submit pull requests for zone additions or improvements
-- Share feedback and suggestions
+Contributions are welcome to refine zone/area boundaries or add ones I haven't gotten to yet.
 
-## License
+**Plugin files:**
+- `CurrentZonePlugin.java`: Entrypoint for plugin by RuneLite client
+- `ZoneDetector.java`: Core of the plugin, and where the WorldArea boundaries are defined.
+- `MinimapOverlay.java`: Renders the display beneath the minimap
+- `CenterOverlay.java`: Renders the animated display center-screen
+- `PluginConfig.java`: Configuration options
 
-This plugin is provided as-is for the RuneLite community. Use it freely and modify it to suit your needs.
+**Testing:**
+- `PluginLauncher.java`: Launches RuneLite with CurrentZonePlugin loaded (using `~/.runelite/credentials.properties`)
+- `VisualTest.java`: Launches a mock RuneLite client to more easily view the overlays
+- `WorldAreaOutput.java`: Helpful for copy from & pasting to [Explv's Map](https://explv.github.io/)
 
----
+### Todo:
+ * Finish charting all zones & areas (land, sea, underground/instanced)
+ * Make minimap element alt+draggable
+ * Make area/region display configurable (like `Lumbridge` instead of `Lumbridge, Kingdom of Misthalin`)
 
-**Enjoy exploring Gielinor with better location awareness!** 🗺️
+## Charting Status
+
+### Land
+| Area Name                | Charted?  |
+|--------------------------|:---------:|
+| Kingdom of Misthalin     | ✅        |
+| Kharidian Desert         | ✅        |
+| Kingdom of Asgarnia      | 🟥        |
+| Kingdom of Kandarin      | 🟥        |
+| Morytania                | 🟥        |
+| Wilderness               | 🟥        |
+| Mos Le'Harmless          | 🟥        |
+| Fossil Island            | 🟥        |
+| Ape Atoll                | 🟥        |
+| Karamja                  | 🟥        |
+| Troll Country            | 🟥        |
+| Fremennik Province       | 🟥        |
+| Fremennik Isles          | 🟥        |
+| Lunar Isle               | 🟥        |
+| Tirannwn                 | 🟥        |
+| Feldip Hills             | 🟥        |
+| Isle of Souls            | 🟥        |
+| Kingdom of Great Kourend | 🟥        |
+| Kingdom of Varlamore     | 🟥        |
+| Kebos Lowlands           | 🟥        |
+
+### Sea
+
+| Ocean Name        | Charted?  |
+|-------------------|:---------:|
+| Ardent Ocean      | 🟥        |
+| Unquiet Ocean     | 🟥        |
+| Eastern Ocean     | 🟥        |
+| Shrouded Ocean    | 🟥        |
+| Western Ocean     | 🟥        |
+| Northern Ocean    | 🟥        |
+| Untamed Ocean     | 🟥        |
+| Forgotten Ocean   | 🟥        |
+| Sunset Ocean      | 🟥        |
+
+#### Other (Underground & Instanced)
+
+| Name                        | Charted? |
+|-----------------------------|:--------:|
+| Lumbridge Castle Cellar     |    🟥    |
+| Mining Guild                |    🟥    |       
+| Castle Wars                 |    🟥    |   
+| .... this list will be long |    🟥    |
