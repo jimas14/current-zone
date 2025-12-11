@@ -1,4 +1,4 @@
-package com.jshliker;
+package com.fanseman;
 
 import lombok.Setter;
 import net.runelite.api.Client;

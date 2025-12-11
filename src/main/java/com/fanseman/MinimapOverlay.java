@@ -1,4 +1,4 @@
-package com.jshliker;
+package com.fanseman;
 
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +30,7 @@ public class MinimapOverlay extends Overlay {
 		setPosition(OverlayPosition.DYNAMIC);
 		setLayer(OverlayLayer.ABOVE_WIDGETS);
 		setPriority(Overlay.PRIORITY_HIGH);
+		setMovable(true);
 	}
 
 	// Package-private constructor for testing

@@ -1,4 +1,4 @@
-package com.jshliker;
+package com.fanseman;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;

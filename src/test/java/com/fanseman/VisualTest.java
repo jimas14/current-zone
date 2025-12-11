@@ -1,4 +1,4 @@
-package com.jshliker;
+package com.fanseman;
 
 import net.runelite.api.Client;
 import net.runelite.api.coords.WorldPoint;

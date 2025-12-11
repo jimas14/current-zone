@@ -1,4 +1,4 @@
-package com.jshliker;
+package com.fanseman;
 
 import java.util.List;
 

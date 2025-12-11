@@ -1,4 +1,4 @@
-package com.jshliker;
+package com.fanseman;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;
@@ -16,7 +16,7 @@ import net.runelite.client.ui.overlay.OverlayManager;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Minimap Current Zone"
+	name = "Current Zone"
 )
 public class CurrentZonePlugin extends Plugin {
 	@Inject
@@ -36,14 +36,14 @@ public class CurrentZonePlugin extends Plugin {
 
 	@Override
 	protected void startUp() {
-		log.debug("Minimap Current Zone plugin started!");
+		log.debug("Current Zone plugin started!");
 		overlayManager.add(overlay);
 		overlayManager.add(centerOverlay);
 	}
 
 	@Override
 	protected void shutDown() {
-		log.debug("Minimap Current Zone plugin stopped!");
+		log.debug("Current Zone plugin stopped!");
 		overlayManager.remove(overlay);
 		overlayManager.remove(centerOverlay);
 	}

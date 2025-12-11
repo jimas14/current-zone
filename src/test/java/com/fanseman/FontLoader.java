@@ -1,4 +1,4 @@
-package com.jshliker;
+package com.fanseman;
 
 import java.awt.Font;
 import java.awt.FontFormatException;
