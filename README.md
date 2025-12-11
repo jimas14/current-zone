@@ -8,17 +8,17 @@ Displays your current named location around the minimap and more prominently on 
 
 ### Minimap Zone Display
 
-\<screenshot>
+![Minimap Overlay](/img/minimap-overlay-example.png "Minimap Overlay")
 
 ### Zone Change Animations
 
-\<screenshot>
+![Center Overlay](/img/center-overlay-example.png "Center Overlay")
 
 ### Configuration
 - **Text Color & Background Color**: Both text & background colors can be customized.
 - **Toggle Overlays**: Both minimap & zone change displays can be toggled on/off.
 
-\<screenshot>
+![Plugin Config](/img/plugin-config-example.png "Plugin Config")
 
 ## How It Works
 

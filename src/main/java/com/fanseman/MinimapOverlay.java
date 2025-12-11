@@ -56,8 +56,8 @@ public class MinimapOverlay extends Overlay {
 		// Set position of overlay based on viewport mode
 		int x, y;
 		if (client.isResized()) {
-			x = client.getCanvas().getSize().width - 65;
-			y = 215;
+			x = client.getCanvas().getSize().width - 90;
+			y = 230;
 		} else {
 			x = client.getCanvas().getSize().width - 115;
 			y = 160;
