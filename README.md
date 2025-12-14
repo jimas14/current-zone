@@ -53,8 +53,8 @@ Contributions are welcome to refine zone/area boundaries or add ones I haven't g
 |--------------------------|:---------:|
 | Kingdom of Misthalin     | ✅        |
 | Kharidian Desert         | ✅        |
-| Kingdom of Asgarnia      | 🟥        |
-| Kingdom of Kandarin      | 🟥        |
+| Kingdom of Asgarnia      | ✅        |
+| Kingdom of Kandarin      | 🟨        |
 | Morytania                | 🟥        |
 | Wilderness               | 🟥        |
 | Mos Le'Harmless          | 🟥        |

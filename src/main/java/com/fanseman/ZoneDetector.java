@@ -166,17 +166,39 @@ public class ZoneDetector {
 
         // Asgarnia Area & Zones
         ASGARNIA_AREA.add(new NamedWorldArea("Kingdom of Asgarnia", 2900, 3200, 200, 200, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Port Sarim", 3005, 3470, 50, 50, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Mining Guild", 3000, 3330, 50, 50, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Falador", 2944, 3360, 100, 100, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Rimmington", 2920, 3200, 50, 50, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Taverley", 2880, 3400, 50, 50, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Gunnarsgrunn", 2890, 3680, 40, 40, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Mudskipper Point", 2980, 3100, 40, 40, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2850, 3500, 80, 100, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Ice Mountain", 3000, 3500, 40, 40, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Dwarven Mine", 3018, 3450, 30, 30, 0));
-        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Asgarnian Ice Dungeon", 3000, 3150, 50, 50, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Monastery", 3040, 3467, 23, 53, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Dwarven Mine", 2999, 3440, 31, 19, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Black Knights' Fortress", 3004, 3508, 29, 15, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Black Knights' Fortress", 3023, 3500, 10, 23, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Goblin Village", 2944, 3477, 24, 41, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Ice Mountain", 2997, 3459, 26, 49, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Mining Guild", 3008, 3331, 21, 19, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("South Falador Farm", 3012, 3280, 56, 34, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Falador", 2936, 3308, 130, 89, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Port Sarim", 3008, 3177, 55, 89, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Monastery", 3040, 3467, 23, 53, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Dark Wizards' Tower", 2900, 3328, 16, 15, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Crafting Guild", 2913, 3266, 33, 31, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Rimmington", 2943, 3196, 48, 69, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Rimmington", 2903, 3196, 40, 39, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Mudksipper Point", 2983, 3107, 23, 23, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Taverly", 2876, 3404, 67, 72, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Druids' Circle", 2915, 3476, 20, 16, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Chaos Temple", 2929, 3512, 13, 9, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2867, 3427, 9, 43, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2862, 3435, 5, 35, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2855, 3438, 7, 32, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2850, 3443, 5, 28, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2844, 3446, 6, 26, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2841, 3449, 3, 24, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2833, 3470, 41, 60, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2793, 3493, 40, 45, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("White Wolf Mountain", 2874, 3496, 5, 28, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Catherby", 2790, 3423, 77, 49, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Catherby", 2791, 3409, 14, 14, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Warriors' Guild", 2833, 3530, 47, 30, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Heroes' Guild", 2881, 3502, 24, 18, 0));
+        ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Burthorpe", 2880, 3525, 55, 55, 0));
 
         // Kandarin Area & Zones
         KANDARIN_AREA.add(new NamedWorldArea("Kingdom of Kandarin", 2500, 3000, 400, 600, 0));
