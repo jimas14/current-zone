@@ -25,7 +25,6 @@ public class ZoneDetector {
      */
 	public static final NamedWorldArea GIELINOR_SURFACE = new NamedWorldArea("Gielinor Surface", 1016, 2104, 2960, 2064, 0);
 	public static final NamedWorldArea UNDERGROUND_INSTANCED = new NamedWorldArea("Underground & Instanced Areas", 785, 4224, 3647, 8868, 0);
-    public static final List<NamedWorldArea> REGION_LIST = new ArrayList<>();
 
 	public static final List<NamedWorldArea> MISTHALIN_AREA = new ArrayList<>();
 	public static final List<NamedWorldArea> MISTHALIN_ZONE_LIST = new ArrayList<>();
@@ -36,34 +35,13 @@ public class ZoneDetector {
 	public static final List<NamedWorldArea> ASGARNIA_AREA = new ArrayList<>();
 	public static final List<NamedWorldArea> ASGARNIA_ZONE_LIST = new ArrayList<>();
 
-	public static final List<NamedWorldArea> KARAMJA_AREA = new ArrayList<>();
-	public static final List<NamedWorldArea> KARAMJA_ZONE_LIST = new ArrayList<>();
-
-	public static final List<NamedWorldArea> KANDARIN_AREA = new ArrayList<>();
-	public static final List<NamedWorldArea> KANDARIN_ZONE_LIST = new ArrayList<>();
-
-	public static final List<NamedWorldArea> WILDERNESS_AREA = new ArrayList<>();
-	public static final List<NamedWorldArea> WILDERNESS_ZONE_LIST = new ArrayList<>();
-	
-	public static final List<NamedWorldArea> MORYTANIA_AREA = new ArrayList<>();
-	public static final List<NamedWorldArea> MORYTANIA_ZONE_LIST = new ArrayList<>();
-	
-	public static final List<NamedWorldArea> TIRANNWN_AREA = new ArrayList<>();
-	public static final List<NamedWorldArea> TIRANNWN_ZONE_LIST = new ArrayList<>();
-	
-	public static final List<NamedWorldArea> FREMENNIK_PROVINCE_AREA = new ArrayList<>();
-	public static final List<NamedWorldArea> FREMENNIK_PROVINCE_ZONE_LIST = new ArrayList<>();
+    public static final List<NamedWorldArea> KANDARIN_AREA = new ArrayList<>();
+    public static final List<NamedWorldArea> KANDARIN_ZONE_LIST = new ArrayList<>();
 
     /*
      * List of all Areas (Kingdoms, Oceans, etc.) and Zones (Cities/towns, Seas, etc.)
-     * Regions are split by Gielinor Surface and all underground zones/instanced areas.
-     * All planes > 0 are considered to be 0.
      */
 	static {
-		// Regions
-		REGION_LIST.add(GIELINOR_SURFACE);
-		REGION_LIST.add(UNDERGROUND_INSTANCED);
-
 		// Misthalin Area & Zones
         MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3072, 3329, 314, 191, 0));
         MISTHALIN_AREA.add(new NamedWorldArea("Kingdom of Misthalin", 3072, 3203, 195, 126, 0));
@@ -216,80 +194,48 @@ public class ZoneDetector {
         ASGARNIA_ZONE_LIST.add(new NamedWorldArea("Burthorpe", 2880, 3525, 55, 55, 0));
 
         // Kandarin Area & Zones
-        KANDARIN_AREA.add(new NamedWorldArea("Kingdom of Kandarin", 2500, 3000, 400, 600, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Seers' Village", 2680, 3450, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Yanille", 2540, 3070, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Camelot", 2750, 3450, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Burthorpe", 2890, 3530, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2800, 3430, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Fishing Guild", 2580, 3410, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Ardougne", 2600, 3300, 100, 100, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Tree Gnome Stronghold", 2440, 3400, 80, 80, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Tree Gnome Village", 2500, 3150, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("West Ardougne", 2500, 3300, 100, 100, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("East Ardougne", 2600, 3300, 100, 100, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Witchaven", 2700, 3300, 40, 40, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Rellekka", 2650, 3600, 60, 60, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Jatizso", 2400, 3800, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Neitiznot", 2300, 3800, 50, 50, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Lunar Isle", 2100, 3900, 80, 80, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Piscatoris", 2300, 3600, 60, 60, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Zanaris", 2400, 4400, 100, 100, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("Trollheim", 2800, 3600, 60, 60, 0));
-		KANDARIN_ZONE_LIST.add(new NamedWorldArea("God Wars Dungeon", 2900, 3700, 50, 50, 0));
-		
-        // Wilderness Area & Zones
-        WILDERNESS_AREA.add(new NamedWorldArea("Wilderness", 2940, 3520, 200, 200, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Wilderness Level 1-10", 2940, 3520, 200, 30, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Wilderness Level 11-20", 2940, 3550, 200, 30, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Wilderness Level 21-30", 2940, 3580, 200, 30, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Wilderness Level 31-40", 2940, 3610, 200, 30, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Wilderness Level 41-50", 2940, 3640, 200, 30, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Wilderness Level 51-60", 2940, 3670, 200, 30, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Mage Arena", 3090, 3950, 30, 30, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Lava Maze", 3060, 3850, 40, 40, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Demonic Ruins", 3280, 3880, 40, 40, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Graveyard of Shadows", 3150, 3680, 40, 40, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Rogues' Castle", 3280, 3920, 30, 30, 0));
-		WILDERNESS_ZONE_LIST.add(new NamedWorldArea("Dark Warriors' Fortress", 3000, 3630, 40, 40, 0));
-		
-		// Morytania Area & Zones
-		MORYTANIA_AREA.add(new NamedWorldArea("Morytania", 3400, 3300, 200, 300, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Canifis", 3480, 3480, 60, 60, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Port Phasmatys", 3700, 3500, 50, 50, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Burgh de Rott", 3480, 3180, 50, 50, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Mort'ton", 3440, 3300, 40, 40, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Meiyerditch", 3600, 3200, 80, 100, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Darkmeyer", 3600, 3300, 60, 60, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Slepe", 3650, 3400, 50, 50, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Barrows", 3560, 3300, 40, 40, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Fenkenstrain's Castle", 3540, 3520, 30, 30, 0));
-		MORYTANIA_ZONE_LIST.add(new NamedWorldArea("Morytania Swamp", 3400, 3400, 100, 100, 0));
-		
-		// Tirannwn Area & Zones
-		TIRANNWN_AREA.add(new NamedWorldArea("Tirannwn", 2200, 3000, 200, 300, 0));
-		TIRANNWN_ZONE_LIST.add(new NamedWorldArea("Lletya", 2330, 3170, 40, 40, 0));
-		TIRANNWN_ZONE_LIST.add(new NamedWorldArea("Prifddinas", 2200, 3300, 100, 100, 0));
-		TIRANNWN_ZONE_LIST.add(new NamedWorldArea("Tirannwn", 2200, 3000, 200, 300, 0));
-		TIRANNWN_ZONE_LIST.add(new NamedWorldArea("Isafdar", 2200, 3100, 150, 200, 0));
-		TIRANNWN_ZONE_LIST.add(new NamedWorldArea("Elf Camp", 2200, 3200, 50, 50, 0));
-		
-		// Fremennik Province Area & Zones
-		FREMENNIK_PROVINCE_AREA.add(new NamedWorldArea("Fremennik Province", 2600, 3600, 200, 200, 0));
-		FREMENNIK_PROVINCE_ZONE_LIST.add(new NamedWorldArea("Rellekka", 2650, 3600, 60, 60, 0));
-		FREMENNIK_PROVINCE_ZONE_LIST.add(new NamedWorldArea("Miscellania", 2500, 3800, 50, 50, 0));
-		FREMENNIK_PROVINCE_ZONE_LIST.add(new NamedWorldArea("Etceteria", 2600, 3800, 50, 50, 0));
-		FREMENNIK_PROVINCE_ZONE_LIST.add(new NamedWorldArea("Jatizso", 2400, 3800, 50, 50, 0));
-		FREMENNIK_PROVINCE_ZONE_LIST.add(new NamedWorldArea("Neitiznot", 2300, 3800, 50, 50, 0));
-		FREMENNIK_PROVINCE_ZONE_LIST.add(new NamedWorldArea("Waterbirth Island", 2500, 3700, 40, 40, 0));
-		FREMENNIK_PROVINCE_ZONE_LIST.add(new NamedWorldArea("Lunar Isle", 2100, 3900, 80, 80, 0));
-		FREMENNIK_PROVINCE_ZONE_LIST.add(new NamedWorldArea("Keldagrim", 2800, 3700, 60, 60, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2450, 3071, 235, 517, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2364, 3364, 86, 190, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2291, 3458, 73, 254, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2261, 3527, 30, 138, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2364, 3554, 42, 84, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2426, 3071, 24, 144, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2363, 3041, 82, 100, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2322, 3036, 41, 42, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2345, 3030, 97, 11, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2559, 3044, 66, 27, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2512, 3588, 33, 8, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2641, 3588, 32, 4, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2650, 3592, 23, 3, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2656, 3595, 21, 4, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2685, 3264, 101, 307, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2786, 3273, 10, 17, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2786, 3409, 81, 23, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2786, 3432, 44, 56, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2806, 3488, 20, 6, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2830, 3432, 10, 29, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2840, 3432, 16, 14, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2856, 3432, 8, 6, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2830, 3461, 4, 14, 0));
+        KANDARIN_AREA.add(new NamedWorldArea("Kingdon of Kandarin", 2785, 3488, 4, 32, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2847, 3427, 14, 10, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2837, 3416, 12, 12, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2839, 3437, 14, 5, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2839, 3430, 8, 17, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2791, 3432, 48, 26, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2803, 3432, 21, 43, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2802, 3410, 4, 22, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Catherby", 2790, 3412, 16, 5, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Camelot Castle", 2743, 3481, 33, 38, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Camelot Castle", 2776, 3504, 2, 15, 0));
+        KANDARIN_ZONE_LIST.add(new NamedWorldArea("Camelot Castle", 2778, 3511, 7, 8, 0));
 	}
 
     public static String getZoneName(WorldPoint point) {
-		// Always use plane 0 so upstairs locations are still registered
+		// Always use plane 0 so upstairs areas are still registered
 		WorldPoint normalizedPoint = new WorldPoint(point.getX(), point.getY(), 0);
 
+        // Regions are split by Gielinor Surface and all underground zones/instanced areas.
 		if (GIELINOR_SURFACE.contains(normalizedPoint)) {
 			for (NamedWorldArea area : MISTHALIN_AREA) {
 				if (area.contains(normalizedPoint)) {
@@ -332,50 +278,6 @@ public class ZoneDetector {
 						}
 					}
 					return KANDARIN_AREA.get(0).name;
-				}
-			}
-			
-			for (NamedWorldArea area : WILDERNESS_AREA) {
-				if (area.contains(normalizedPoint)) {
-					for (NamedWorldArea zone : WILDERNESS_ZONE_LIST) {
-						if (zone.contains(normalizedPoint)) {
-							return zone.name + ", " + WILDERNESS_AREA.get(0).name;
-						}
-					}
-					return WILDERNESS_AREA.get(0).name;
-				}
-			}
-			
-			for (NamedWorldArea area : MORYTANIA_AREA) {
-				if (area.contains(normalizedPoint)) {
-					for (NamedWorldArea zone : MORYTANIA_ZONE_LIST) {
-						if (zone.contains(normalizedPoint)) {
-							return zone.name + ", " + MORYTANIA_AREA.get(0).name;
-						}
-					}
-					return MORYTANIA_AREA.get(0).name;
-				}
-			}
-			
-			for (NamedWorldArea area : TIRANNWN_AREA) {
-				if (area.contains(normalizedPoint)) {
-					for (NamedWorldArea zone : TIRANNWN_ZONE_LIST) {
-						if (zone.contains(normalizedPoint)) {
-							return zone.name + ", " + TIRANNWN_AREA.get(0).name;
-						}
-					}
-					return TIRANNWN_AREA.get(0).name;
-				}
-			}
-			
-			for (NamedWorldArea area : FREMENNIK_PROVINCE_AREA) {
-				if (area.contains(normalizedPoint)) {
-					for (NamedWorldArea zone : FREMENNIK_PROVINCE_ZONE_LIST) {
-						if (zone.contains(normalizedPoint)) {
-							return zone.name + ", " + FREMENNIK_PROVINCE_AREA.get(0).name;
-						}
-					}
-					return FREMENNIK_PROVINCE_AREA.get(0).name;
 				}
 			}
 			return GIELINOR_SURFACE.name;

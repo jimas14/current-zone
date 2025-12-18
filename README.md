@@ -45,6 +45,7 @@ Contributions are welcome to refine zone/area boundaries or add ones I haven't g
  * Finish charting all zones & areas (land, sea, underground/instanced)
  * Make minimap element alt+draggable
  * Make area/region display configurable (like `Lumbridge` instead of `Lumbridge, Kingdom of Misthalin`)
+ * Make both display elements transparent configurable
 
 ## Charting Status
 
@@ -92,5 +93,7 @@ Contributions are welcome to refine zone/area boundaries or add ones I haven't g
 |-----------------------------|:--------:|
 | Lumbridge Castle Cellar     |    🟥    |
 | Mining Guild                |    🟥    |       
-| Castle Wars                 |    🟥    |   
+| Castle Wars                 |    🟥    |
+| Player Owned House          |    🟥    |
+| Vorkath                     |    🟥    |
 | .... this list will be long |    🟥    |
